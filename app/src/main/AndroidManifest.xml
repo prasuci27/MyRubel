@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.boss.myrubelapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="com.google.c2dm.permission.RECEIVE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_rubel"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_rubel_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyRubelApp">
+        <activity android:name="com.boss.myrubelapp.home.KurikulumActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.boss.myrubelapp.notification.AnnounceListActivity"
+            android:exported="true"/>
+
+        <service
+            android:name="com.boss.myrubelapp.notification.FirebaseService"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING.EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.boss.myrubelapp.notification.AnnounceActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.boss.myrubelapp.quiz.score.ScoreWorldActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.score.ScoreTimeActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.nilai.ResultWorldActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.nilai.ResultTimeActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.nilai.ResultIntroActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.score.ScoreIntroActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.score.ScoreGreetActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.boss.myrubelapp.absen.AmbilAbsenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.boss.myrubelapp.absen.AbsenActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.boss.myrubelapp.home.AboutActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.boss.myrubelapp.chat.ChatLogActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.boss.myrubelapp.chat.ChatActivity" />
+        </activity>
+        <activity android:name="com.boss.myrubelapp.chat.NewMessageActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.boss.myrubelapp.chat.ChatActivity" />
+        </activity>
+        <activity android:name="com.boss.myrubelapp.chat.ChatActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.boss.myrubelapp.home.MainActivity" />
+        </activity>
+        <activity android:name="com.boss.myrubelapp.quiz.soal.QuizWorldActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.soal.QuizTimeActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.quiz.soal.QuizIntroActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.boss.myrubelapp.quiz.nilai.ResultActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.boss.myrubelapp.home.EditProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.boss.myrubelapp.quiz.soal.QuizGreetingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.boss.myrubelapp.quiz.QuizActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.boss.myrubelapp.materi.world.DemonstrativeActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.world.PluralNounActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.world.ArticleActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.world.NounActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.days.NumberActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.days.PrepositionActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.days.OclockActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.days.TimeActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.intro.PronounActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.intro.PresentActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.intro.FamilyActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.intro.InformationActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.intro.IntroductionActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.greeting.ApologyActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.greeting.GratitudeActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="com.boss.myrubelapp.sign.signup.SignUpActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.boss.myrubelapp.sign.signin.SignInActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.boss.myrubelapp.materi.world.WorldActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.days.DayActivity"
+            android:exported="true"/>
+        <activity android:name="com.boss.myrubelapp.materi.intro.IntroActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.greeting.MenyapaActivity"
+            android:exported="true" />
+        <activity android:name="com.boss.myrubelapp.materi.greeting.GreetingsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.boss.myrubelapp.SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.boss.myrubelapp.home.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+</manifest>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45522391267",
+    "project_id": "myrubelapp",
+    "storage_bucket": "myrubelapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45522391267:android:44252d381f7594b812b5d6",
+        "android_client_info": {
+          "package_name": "com.boss.myrubelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45522391267-keabsb316777fe0f27d2hkehprbr1uef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmwcWIwJZnq8NspPduvnRx6EdCw5ciCQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45522391267-keabsb316777fe0f27d2hkehprbr1uef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
